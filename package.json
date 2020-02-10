@@ -1,0 +1,46 @@
+{
+  "name": "jsonp-modernized",
+  "version": "1.0.0",
+  "description": "Promise based requests and error handling for JSONP",
+  "scripts": {
+    "test": "npm run development && mocha",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prepublishOnly": "npm run test && npm run production"
+  },
+  "keywords": [
+    "jsonp",
+    "promise",
+    "request",
+    "http",
+    "get",
+    "modern",
+    "modernized"
+  ],
+  "main": "index.js",
+  "directories": {
+    "lib": "./lib",
+    "example": "./example",
+    "test": "./test"
+  },
+  "author": "Jyri Mikkola",
+  "license": "MIT",
+  "dependencies": {
+    "is-callable": "^1.1.5",
+    "is-url": "^1.2.4",
+    "lodash.upperfirst": "^4.3.1",
+    "query-string": "^6.10.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.0",
+    "laravel-mix": "^5.0.1",
+    "mocha": "^7.0.1",
+    "mocha-jsdom": "^2.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "jsdelivr": "dist/jsonp.min.js",
+  "unpkg": "dist/jsonp.min.js"
+}

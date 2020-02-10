@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" style="text-align: center;">
+  <head>
+    <title>Test jsonp-modernized</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Test json-modernized package">
+    <meta name="keywords" content="jsonp,modernized,promise">
+    <meta name="author" content="Jyri Mikkola">
+    <script src="../dist/jsonp.js"></script>
+  </head>
+
+  <body>
+
+    <h1>JSONP Tester</h1>
+    <input style="width: 50%;" type="text" id="url" placeholder="JSONP endpoint URL"/>
+    <br/>
+    <br/>
+    
+    <textarea style="width: 50%;" id="response" cols="50" rows="30" placeholder="Response from JSONP endpoint" readonly></textarea>
+    <br/>
+    <br/>
+
+    <button onClick="sendRequest();">Send</button>
+
+    <script>
+      
+
+      function sendRequest() {
+        document.getElementById('response').innerHTML = "loading..";
+
+        jsonp(document.getElementById('url').value)
+          .then(response => {
+            document.getElementById('response').innerHTML = JSON.stringify(response, null, 2);
+          }) 
+          .catch(error => {
+            document.getElementById('response').innerHTML = JSON.stringify(error.message, null, 2);
+          });
+      }
+    </script>
+  </body>
+</html>
