@@ -17,6 +17,9 @@
       "type": "git",
       "url": "https://github.com/nonetallt/jsonp-modernized.git"
   },
+  "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+  },
   "homepage": "https://github.com/nonetallt/jsonp-modernized",
   "bugs": {
       "url": "https://github.com/nonetallt/jsonp-modernized/issues"
