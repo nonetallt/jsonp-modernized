@@ -11,6 +11,16 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prepublishOnly": "npm run test && npm run production"
   },
+  "author": "Jyri Mikkola",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/nonetallt/jsonp-modernized.git"
+  },
+  "homepage": "https://github.com/nonetallt/jsonp-modernized",
+  "bugs": {
+      "url": "https://github.com/nonetallt/jsonp-modernized/issues"
+  },
   "keywords": [
     "jsonp",
     "promise",
@@ -20,14 +30,12 @@
     "modern",
     "modernized"
   ],
-  "main": "index.js",
+  "browser": "index.js",
   "directories": {
     "lib": "./lib",
     "example": "./example",
     "test": "./test"
   },
-  "author": "Jyri Mikkola",
-  "license": "MIT",
   "dependencies": {
     "is-callable": "^1.1.5",
     "is-url": "^1.2.4",
