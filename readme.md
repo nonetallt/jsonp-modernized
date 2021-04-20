@@ -4,7 +4,7 @@ A modernized package for sending [jsonp](https://en.wikipedia.org/wiki/JSONP) re
 
 This package is based on the [original npm jsonp package](https://www.npmjs.com/package/jsonp) and is ment to resolve some of its shortcomings:
 
-* At the time of writing, the original jsonp package has been not been updated since 2016
+* At the time of writing, the original jsonp package has not been updated since 2016
 * The original jsonp package does not handle errors properly, only waiting for timeout even if server error is encountered
 * The original jsonp package does not support promises
 
